@@ -1,0 +1,151 @@
+body{
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+.section-title {
+  width: 100%;
+  padding: 0 15px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h2{
+    color: #fff;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+     
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*team section*/
+.team-section{
+    min-height: 100vh;
+    background-color: #19222e;
+    padding: 80px 0;
+}
+.team-section button.card{
+ width: calc((100% / 3) - 30px);
+ margin:  0 15px 40px;
+ /* background-color: saddlebrown; */
+ position: relative;
+ padding: 30px 0 0;
+ background: none !important;
+ border: transparent;
+}
+.team-section .card-img{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    transition: box-shadow .3s ease;
+    border:  5px solid transparent;
+}
+.team-section button.card:focus .card-img {
+ box-shadow: 0 0 10px #ffff;
+}
+.team-section .card-img img {
+    border-radius: 50%;
+}
+.team-section .card-info{
+background-color: snow;
+text-align: center;
+padding: 20px 15px;
+position: absolute;
+left: 0;
+bottom: 100%;
+width: 100%;
+opacity: 0;
+visibility: hidden;
+}
+.team-section button.card:focus {
+border: transparent !important;
+background-color: none;
+outline: none;
+}
+.team-section .card:focus .card-info{
+opacity: 1;
+visibility:visible;
+
+}
+
+.team-section .card-info::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 20px);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid snow;
+}
+.team-section .card-info h3{
+ font-size: 24px;
+ text-transform: capitalize;
+ color:saddlebrown;   
+}
+.team-section .card-info p{
+font-size: 24px;
+text-transform: capitalize;
+color:saddlebrown;   
+}
+.team-section .card-info .social-icons a{
+    margin:3px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.team-section .card-info .social-icons a:hover{
+   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.team-section .card-info .social-icons img{
+width:25px ;  
+}
+
+/* Responsive */
+@media(max-width : 991px){
+    .team-section button.card{
+        width: calc(50% - 30px); 
+        background-color:snow !important;  
+        padding: 0 15px; 
+    }
+    .team-section .card-info{
+        position: relative;
+        visibility: visible;
+        padding: 30px 0;
+        opacity: 1;
+        bottom: auto;
+        left: auto;
+    }
+    .team-section .card-info::before{
+        content: none;
+    }
+    .team-section .card-img {
+        margin: 30px auto 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .team-section button.card:focus .card-img {
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+       }
+     
+}
+
+@media(max-width : 574px){
+    .team-section button.card{
+        width: calc(100% - 30px); 
+    }
+}
